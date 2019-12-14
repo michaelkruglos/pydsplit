@@ -9,8 +9,7 @@ filename = sys.argv[3]
 size = os.path.getsize(filename)
 
 fh = open(filename, "rb")
-nameonly = os.path.splitext(filename)[0]
-extonly = os.path.splitext(filename)[1]
+nameonly,extonly = os.path.splitext(filename)
 
 data = ""
 if startoffset > 0:
